@@ -1,0 +1,7 @@
+title: Modelos de análisis cualitativo
+description: Maestría en Educación U.P.T.C. 2026-2 · Seminario de trabajo de grado
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
