@@ -484,7 +484,7 @@ function renderFicha(){
    </div>
    <div class="card"><h3>Valoración por criterio</h3><div class="crit-list">${CRITERIOS.map((c,i)=>`<div class="ci">${cellBtn(p,i)}<div><h4>${esc(c.corto)}</h4><p>${esc(p.n[i])}</p></div></div>`).join("")}</div></div>
    <div class="card"><h3>Perfil</h3>${radar(p)}<p class="note">C1 a C8 siguen el orden de los criterios. ${CRITERIOS.map((c,i)=>"C"+(i+1)+" "+c.corto).join(" · ")}</p>
-    ${p.alertas.length?`<h3 style="margin-top:14px">Alertas</h3>${p.alertas.map(a=>`<div class="alert">${esc(a)}</div>`).join("")}`:""}${p.orto&&p.orto.length?`<h3 style="margin-top:14px">Redacción y ortotipografía</h3><ul class="orto">${p.orto.map(o=>`<li>${esc(o)}</li>`).join("")}</ul>`:""}</div>
+    ${p.alertas.length?`<h3 style="margin-top:14px">Alertas</h3>${p.alertas.map(a=>`<div class="alert">${esc(a)}</div>`).join("")}`:""}</div>
    ${p.modelos.length?`<div class="card"><h3>Modelos metodológicos</h3><div class="mfit">${p.modelos.map(m=>{const M=MODELOS_SISTEMA[m.id]||NUEVOS[m.id];return `<div class="mf"><span class="tag t-${m.ajuste}">${m.ajuste==="declarado"?"declarado":m.ajuste==="sugerido"?"sugerido":"ajuste "+m.ajuste}</span><div><h4>${esc(M.nombre)}${isNuevo(m.id)?' <span class="chip nuevo">nuevo</span>':""}</h4><p>${esc(m.nota)}</p><div class="steps">${M.proc.map(s=>`<span>${esc(s)}</span>`).join("")}</div></div></div>`}).join("")}</div></div>`:""}
    <div class="card"><h3>Recomendaciones</h3><ul class="clean">${p.recs.map(r=>`<li>${esc(r)}</li>`).join("")}</ul></div>
    ${p.datos?`<div class="card" style="grid-column:1/-1"><h3>Datos del anexo: Test INSEBULL antes y después</h3>${insebull()}</div>`:""}
