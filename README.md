@@ -1,4 +1,4 @@
-# Modelos de análisis cualitativo · Maestría en Educación
+# Matrices de coherencia y modelos de análisis cualitativo
 
 Seminario de trabajo de grado, Maestría en Educación U.P.T.C. 2026-2. Docente Elver Chaparro Cardozo.
 
